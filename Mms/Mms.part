@@ -1,0 +1,118 @@
+--- a/Mms/AndroidManifest.xml	2013-04-02 23:22:16.000000000 +0800
++++ b/Mms/AndroidManifest.xml	2013-04-04 10:40:07.000000000 +0800
+@@ -34,7 +34,7 @@
+         <service android:name=".transaction.TransactionService" android:exported="false" />
+         <service android:name=".transaction.SmsReceiverService" android:exported="false" />
+         <service android:name=".transaction.SmsReportService" android:exported="false" />
+-        <activity android:theme="@style/Theme.Light.ActionBar.NoTitle" android:label="@string/app_label" android:name=".ui.MmsTabActivity" android:clearTaskOnLaunch="true" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateAlwaysHidden|adjustPan" android:uiOptions="splitActionBarWhenNarrow">
++        <activity android:theme="@style/Theme.Light.ActionBar.NoTitle" android:label="@string/app_label" android:name=".ui.MmsTabActivity" android:clearTaskOnLaunch="true" android:launchMode="singleTop" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateAlwaysHidden|adjustPan" android:uiOptions="splitActionBarWhenNarrow">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+                 <category android:name="android.intent.category.LAUNCHER" />
+@@ -53,8 +53,8 @@
+                 <data android:mimeType="vnd.android-dir/mms-sms" />
+             </intent-filter>
+         </activity>
+-        <activity-alias android:name=".ui.ConversationList" android:exported="true" android:screenOrientation="portrait" android:targetActivity=".ui.MmsTabActivity" />
+-        <activity android:theme="@style/Theme.Light.Title" android:name=".ui.FestivalSmsList" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:uiOptions="splitActionBarWhenNarrow" />
+-        <activity android:theme="@style/Theme.Light.Translucent.NoTitle" android:name=".ui.EasterEggActivity" android:launchMode="singleTop" android:screenOrientation="portrait" />
++        <activity-alias android:name=".ui.ConversationList" android:exported="true"  android:targetActivity=".ui.MmsTabActivity" />
++        <activity android:theme="@style/Theme.Light.Title" android:name=".ui.FestivalSmsList" android:launchMode="singleTop"  android:configChanges="keyboardHidden|orientation|screenSize" android:uiOptions="splitActionBarWhenNarrow" />
++        <activity android:theme="@style/Theme.Light.Translucent.NoTitle" android:name=".ui.EasterEggActivity" android:launchMode="singleTop" />
+         <activity android:theme="@android:style/Theme.NoDisplay" android:name=".ui.ComposeMessageRouterActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden">
+             <intent-filter>
+@@ -117,31 +117,31 @@
+                 <data android:mimeType="video/*" />
+             </intent-filter>
+         </activity>
+-        <activity android:theme="@style/Theme.Light.Conversation" android:name=".ui.NewMessageActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden|adjustResize" />
+-        <activity android:theme="@style/Theme.Light.Conversation" android:name=".ui.SingleRecipientConversationActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden|adjustResize" android:uiOptions="splitActionBarWhenNarrow" />
+-        <activity android:theme="@style/Theme.Light.Conversation" android:name=".ui.MultipleRecipientsConversationActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden|adjustResize" android:uiOptions="splitActionBarWhenNarrow" />
+-        <activity android:theme="@style/Theme.Light.Conversation" android:name=".ui.MultipleRecipientsConversationDetailsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
+-        <activity-alias android:name=".ui.ForwardMessageActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:targetActivity=".ui.ComposeMessageRouterActivity" android:windowSoftInputMode="stateHidden" />
+-        <activity android:theme="@style/Theme.Light.Dialog" android:label="@string/storage_limits_activity" android:name=".ui.WarnOfStorageLimitsActivity" android:excludeFromRecents="true" android:screenOrientation="portrait" />
+-        <activity android:theme="@style/Theme.Light.Dialog.NoTitle" android:name=".ui.NewMessagePopupActivity" android:excludeFromRecents="true" android:launchMode="singleInstance" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden|adjustResize" />
+-        <activity android:theme="@style/Theme.Light.Dialog.NoTitle" android:name=".ui.DateTimePickerActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|adjustPan">
++        <activity android:theme="@style/Theme.Light.Conversation" android:name=".ui.NewMessageActivity" android:launchMode="singleTask"  android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden|adjustResize" />
++        <activity android:theme="@style/Theme.Light.Conversation" android:name=".ui.SingleRecipientConversationActivity" android:launchMode="singleTask"  android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden|adjustResize" android:uiOptions="splitActionBarWhenNarrow" />
++        <activity android:theme="@style/Theme.Light.Conversation" android:name=".ui.MultipleRecipientsConversationActivity" android:launchMode="singleTask"  android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden|adjustResize" android:uiOptions="splitActionBarWhenNarrow" />
++        <activity android:theme="@style/Theme.Light.Conversation" android:name=".ui.MultipleRecipientsConversationDetailsActivity"  android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden" />
++        <activity-alias android:name=".ui.ForwardMessageActivity"  android:configChanges="keyboardHidden|orientation|screenSize" android:targetActivity=".ui.ComposeMessageRouterActivity" android:windowSoftInputMode="stateHidden" />
++        <activity android:theme="@style/Theme.Light.Dialog" android:label="@string/storage_limits_activity" android:name=".ui.WarnOfStorageLimitsActivity" android:excludeFromRecents="true"  />
++        <activity android:theme="@style/Theme.Light.Dialog.NoTitle" android:name=".ui.NewMessagePopupActivity" android:excludeFromRecents="true" android:launchMode="singleInstance"  android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden|adjustResize" />
++        <activity android:theme="@style/Theme.Light.Dialog.NoTitle" android:name=".ui.DateTimePickerActivity" android:launchMode="singleTop"  android:configChanges="keyboard|keyboardHidden|orientation" android:windowSoftInputMode="stateHidden|adjustPan">
+             <intent-filter>
+                 <action android:name="android.intent.action.PICK" />
+                 <category android:name="android.intent.category.DEFAULT" />
+                 <data android:mimeType="vnd.android.cursor.item/datetime" android:host="com.android.mms" />
+             </intent-filter>
+         </activity>
+-        <activity android:theme="@style/Theme.Light.Dialog.NoTitle" android:name=".ui.TimedMessageExpiredActivity" android:launchMode="singleInstance" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden|adjustResize" />
+-        <activity android:theme="@style/Theme.Light.Dialog" android:label="@string/change_duration_activity" android:name=".ui.EditSlideDurationActivity" android:screenOrientation="portrait" />
+-        <activity android:theme="@style/Theme.Light.Title" android:label="@string/edit_slideshow_activity" android:name=".ui.SlideshowEditActivity" android:screenOrientation="portrait" />
+-        <activity android:theme="@style/Theme.Light" android:label="@string/edit_slide_activity" android:name=".ui.SlideEditorActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
+-        <activity android:theme="@style/Theme.Light.NoTitle" android:label="@string/slideshow_activity" android:name=".ui.SlideshowActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+-        <activity android:theme="@style/Theme.Light.Translucent.NoTitle" android:label="@string/class_0_message_activity" android:name=".ui.ClassZeroActivity" android:excludeFromRecents="true" android:screenOrientation="portrait" />
+-        <activity android:theme="@miui:style/V5.Theme.Light.Settings" android:label="@string/preferences_title" android:name=".ui.MessagingPreferenceActivity" android:exported="true" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" />
+-        <activity android:theme="@miui:style/V5.Theme.Light.Settings" android:label="@string/pref_advanced_settings_title" android:name=".ui.MessagingAdvancedPreferenceActivity" android:screenOrientation="portrait" />
+-        <activity android:theme="@miui:style/V5.Theme.Light.Settings" android:label="@string/mx_msg" android:name=".ui.MxPreferenceActivity" android:screenOrientation="portrait" />
+-        <activity android:theme="@style/Theme.Light.Title" android:name=".ui.PickerActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:uiOptions="splitActionBarWhenNarrow" />
+-        <activity android:theme="@style/Theme.Light.Title" android:name=".ui.PhraseActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:uiOptions="splitActionBarWhenNarrow" />
++        <activity android:theme="@style/Theme.Light.Dialog.NoTitle" android:name=".ui.TimedMessageExpiredActivity" android:launchMode="singleInstance"  android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden|adjustResize" />
++        <activity android:theme="@style/Theme.Light.Dialog" android:label="@string/change_duration_activity" android:name=".ui.EditSlideDurationActivity"  />
++        <activity android:theme="@style/Theme.Light.Title" android:label="@string/edit_slideshow_activity" android:name=".ui.SlideshowEditActivity"  />
++        <activity android:theme="@style/Theme.Light" android:label="@string/edit_slide_activity" android:name=".ui.SlideEditorActivity"  android:windowSoftInputMode="adjustResize" />
++        <activity android:theme="@style/Theme.Light.NoTitle" android:label="@string/slideshow_activity" android:name=".ui.SlideshowActivity"  android:configChanges="keyboardHidden|orientation|screenSize" />
++        <activity android:theme="@style/Theme.Light.Translucent.NoTitle" android:label="@string/class_0_message_activity" android:name=".ui.ClassZeroActivity" android:excludeFromRecents="true"  />
++        <activity android:theme="@miui:style/V5.Theme.Light.Settings" android:label="@string/preferences_title" android:name=".ui.MessagingPreferenceActivity" android:exported="true" android:launchMode="singleTop"  android:configChanges="keyboardHidden|orientation|screenSize" />
++        <activity android:theme="@miui:style/V5.Theme.Light.Settings" android:label="@string/pref_advanced_settings_title" android:name=".ui.MessagingAdvancedPreferenceActivity"  />
++        <activity android:theme="@miui:style/V5.Theme.Light.Settings" android:label="@string/mx_msg" android:name=".ui.MxPreferenceActivity"  />
++        <activity android:theme="@style/Theme.Light.Title" android:name=".ui.PickerActivity"  android:configChanges="keyboardHidden|orientation|screenSize" android:uiOptions="splitActionBarWhenNarrow" />
++        <activity android:theme="@style/Theme.Light.Title" android:name=".ui.PhraseActivity"  android:configChanges="keyboardHidden|orientation|screenSize" android:uiOptions="splitActionBarWhenNarrow" />
+         <receiver android:name=".transaction.PushReceiver" android:permission="android.permission.BROADCAST_WAP_PUSH">
+             <intent-filter>
+                 <action android:name="android.provider.Telephony.WAP_PUSH_RECEIVED" />
+@@ -168,7 +168,7 @@
+                 <action android:name="com.xiaomi.push.kicked" />
+             </intent-filter>
+         </receiver>
+-        <activity android:theme="@style/Theme.Light.Title" android:label="@string/sim_manage_messages_title" android:name=".ui.ManageSimMessages" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:uiOptions="splitActionBarWhenNarrow">
++        <activity android:theme="@style/Theme.Light.Title" android:label="@string/sim_manage_messages_title" android:name=".ui.ManageSimMessages" android:launchMode="singleTop"  android:configChanges="keyboardHidden|orientation|screenSize" android:uiOptions="splitActionBarWhenNarrow">
+             <intent-filter>
+                 <action android:name="android.intent.action.VIEW" />
+             </intent-filter>
+@@ -234,13 +234,13 @@
+                 <action android:name="com.xiaomi.action.ACTIVATE_ALL_MI_SERVICES" />
+             </intent-filter>
+         </receiver>
+-        <activity android:theme="@style/Theme.Light.Dialog" android:name=".ui.ConfirmRateLimitActivity" android:screenOrientation="portrait">
++        <activity android:theme="@style/Theme.Light.Dialog" android:name=".ui.ConfirmRateLimitActivity" >
+             <intent-filter>
+                 <action android:name="com.android.mms.RATE_LIMIT_SURPASSED" />
+                 <category android:name="android.intent.category.DEFAULT" />
+             </intent-filter>
+         </activity>
+-        <activity android:theme="@style/Theme.Light" android:label="@string/search" android:name=".ui.SearchActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize">
++        <activity android:theme="@style/Theme.Light" android:label="@string/search" android:name=".ui.SearchActivity"  android:configChanges="keyboardHidden|orientation|screenSize">
+             <intent-filter>
+                 <action android:name="android.intent.action.SEARCH" />
+                 <category android:name="android.intent.category.DEFAULT" />
+@@ -293,7 +293,7 @@
+         <service android:name="com.xiaomi.mms.transaction.MxMmsTransactionService" />
+         <service android:name=".transaction.SendMessageService" />
+         <provider android:name="TempFileProvider" android:multiprocess="true" android:authorities="mms_temp_file" />
+-        <activity android:name=".ui.MiniPreferenceActivity" android:screenOrientation="portrait">
++        <activity android:name=".ui.MiniPreferenceActivity" >
+             <intent-filter>
+                 <action android:name="com.android.mms.intent.action.MESSAGING_APP_NOTIFICATIONS" />
+                 <category android:name="android.intent.category.DEFAULT" />
+@@ -318,7 +318,7 @@
+             </intent-filter>
+         </receiver>
+         <service android:name=".autoregistration.cu.DeviceManagerService" />
+-        <activity android:theme="@style/Theme.Light.Title" android:name=".ui.PrivateConversationListActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateAlwaysHidden|adjustPan" android:uiOptions="splitActionBarWhenNarrow" />
+-        <activity android:theme="@miui:style/V5.Theme.Light.Settings" android:label="@string/private_settings" android:name=".ui.PrivatePreferenceActivity" android:screenOrientation="portrait" android:uiOptions="splitActionBarWhenNarrow" />
++        <activity android:theme="@style/Theme.Light.Title" android:name=".ui.PrivateConversationListActivity"  android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateAlwaysHidden|adjustPan" android:uiOptions="splitActionBarWhenNarrow" />
++        <activity android:theme="@miui:style/V5.Theme.Light.Settings" android:label="@string/private_settings" android:name=".ui.PrivatePreferenceActivity"  android:uiOptions="splitActionBarWhenNarrow" />
+     </application>
+ </manifest>
